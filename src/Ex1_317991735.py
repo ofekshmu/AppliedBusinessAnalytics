@@ -37,3 +37,20 @@ print(i*"I will submit my assignment on time\n")
 #############################################
 #                   Task 7
 #############################################
+text = input("Please insert some text: ")
+start = int(input())
+end = int(input())
+copies = int(input())
+print(copies*text[start:end + 1])
+
+#############################################
+#                   Challenge
+#############################################
+text = input("Please insert some text: ")
+start = int(input())
+end = int(input())
+copies = int(input())
+if start < 0 or end < 0 or end >= len(text) or copies < 0:
+    print("Error: illegal input!")
+else:
+    print(copies*text[start:end + 1])
