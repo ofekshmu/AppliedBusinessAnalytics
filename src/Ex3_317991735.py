@@ -81,33 +81,3 @@ def get_longest_increasing_subsequence(mat):
                 max_count = count
         count = 1
     return max_count
-
-
-
-if __name__ == "__main__":
-    print_pairs("ABCDEFG")
-
-    lst = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
-    for i in lst:
-        assert is_prime(i)
-
-    print(log10_list_comprehension([1,2,3,4,5,6,7]))
-    print(log10_list_comprehension([]))
-
-    lst = [1,2,3,4,5,6]
-    log10_inplace(lst)
-    print(lst)
-    lst = []
-    log10_inplace(lst)
-    print(lst)
-    
-    print(most_common_value_in_dict({'1':2, 'a':3, 'x':3, 4:3, 2:2, 'y':1}))
-    print(get_highest_average_column([[-42]]))
-
-    assert get_longest_increasing_subsequence([[-4, 5, 3, 3.2], [5, 6.0, -2.4, 6], [7, 3, 2, -1]]) == 2
-    assert get_longest_increasing_subsequence([[-4, 5, 5, 3.2], [5, 6.0, -2.4, 6], [7, 3, 2, -1]]) == 3
-    assert get_longest_increasing_subsequence([[-4, 5, 6, 3.2], [5, 6.0, -2.4, 6], [7, 3, 2, -1]]) == 3
-    assert get_longest_increasing_subsequence([[-4, 5, 6, 6], [5, 6.0, -2.4, 6], [7, 3, 2, -1]]) == 4
-    assert get_longest_increasing_subsequence([[-4, 5, 6, 10], [5, 6.0, -2.4, 6], [7, 3, 2, -1]]) == 4
-    assert get_longest_increasing_subsequence([[-4, -5, -6, -7], [4, 3, 2, 1], [4, 3, 2, 1]]) == 1
-    assert get_longest_increasing_subsequence([[-42]]) == 1
