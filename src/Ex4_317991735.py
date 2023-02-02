@@ -46,16 +46,15 @@ def regex_a(txt):
     return match
 
 def regex_b(txt):
-    match = re.search("Product review: \d", txt) 
+    match = re.search("Product review: [1-5]", txt) 
     return match
 
 def regex_c(txt):
-    match = re.search("Product review: \s*\d{1,5}", txt) 
+    match = re.search("Product review: *[1-5]", txt) 
     return match
 
 def regex_d(txt):
-    match = re.search("Product review: \d{3,5}\.", txt) 
+    match = re.search("Product review: .{3,5}\.", txt) 
     return match
-#############################################
-#                   Challenge
-#############################################
+
+#print(regex_c("Product review:     231414"))
